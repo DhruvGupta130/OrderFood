@@ -9,6 +9,16 @@
 - **User-Friendly Navigation**: Enjoy a smooth experience with our intuitive navbar, allowing quick access to your profile, cart, and search.
 - **Real-Time Order Tracking**: Stay updated on your order status from preparation to delivery.
 
+## 🛠️ Prerequisites
+
+Before you get started, ensure you have the following installed:
+
+- **Node.js** (for the frontend)
+- **npm** (Node Package Manager)
+- **React.js** (for building the user interface)
+- **Java** (for the Spring Boot backend)
+- **Spring Boot** (for creating the backend services)
+
 ## 🛠️ Getting Started
 
 ### Installation
