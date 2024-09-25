@@ -22,6 +22,7 @@ export const Navbar = () => {
     const handleCartNavigate = () => {
         if (auth.user) {
             navigate("/cart");
+            window.location.reload();
         } else {
             alert('You must be logged in to view your cart.'); // Keeping alert for cart access
             navigate("/account/login");
@@ -42,6 +43,7 @@ export const Navbar = () => {
 
     const handleHomeNavigate = () => {
         navigate('/');
+        window.location.reload();
     };
 
     return (

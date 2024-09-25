@@ -1,6 +1,5 @@
 package com.project.orderfood.DTO;
 
-import com.project.orderfood.Model.IngredientsItem;
 import lombok.Data;
 
 import java.util.List;

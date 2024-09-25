@@ -3,9 +3,7 @@ package com.project.orderfood.Controller;
 import com.project.orderfood.DTO.CartItemRequest;
 import com.project.orderfood.Model.Cart;
 import com.project.orderfood.Model.CartItem;
-import com.project.orderfood.Model.User;
 import com.project.orderfood.Service.CartService;
-import com.project.orderfood.Service.UserService;
 import lombok.AllArgsConstructor;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
@@ -16,7 +14,6 @@ import org.springframework.web.bind.annotation.*;
 public class CartController {
 
     private final CartService cartService;
-    private final UserService userServiceImpl;
 
     @PostMapping("/cart/add")
     public ResponseEntity<CartItem> addItem(@RequestBody CartItemRequest request,
@@ -27,10 +24,7 @@ public class CartController {
     }
 
     @PutMapping("/cart/update")
-    public ResponseEntity<CartItem> updateItem(@RequestBody CartItemRequest request,
-                                               @RequestHeader("Authorization") String token) throws Exception {
-        token = token.replace("Bearer ", "");
-        User user = userServiceImpl.findByToken(token);
+    public ResponseEntity<CartItem> updateItem(@RequestBody CartItemRequest request) throws Exception {
         CartItem cartItem = cartService.updateCartItem(request.getItemId(), request.getQuantity());
         return ResponseEntity.ok(cartItem);
     }

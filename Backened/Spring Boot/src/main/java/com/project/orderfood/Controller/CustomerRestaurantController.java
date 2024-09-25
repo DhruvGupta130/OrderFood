@@ -1,10 +1,8 @@
 package com.project.orderfood.Controller;
 
 import com.project.orderfood.DTO.RestaurantDTO;
-import com.project.orderfood.Model.Food;
 import com.project.orderfood.Model.Restaurant;
 import com.project.orderfood.Model.User;
-import com.project.orderfood.Repository.FoodRepo;
 import com.project.orderfood.Service.RestaurantService;
 import com.project.orderfood.Service.UserService;
 import lombok.AllArgsConstructor;
@@ -21,7 +19,6 @@ public class CustomerRestaurantController {
 
     private final RestaurantService restaurantService;
     private final UserService userService;
-    private final FoodRepo foodRepo;
 
     @GetMapping("/search")
     public ResponseEntity<List<Restaurant>> searchRestaurant(@RequestParam String name){

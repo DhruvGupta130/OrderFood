@@ -1,27 +1,27 @@
 package com.project.orderfood.DTO;
 
 import com.project.orderfood.Model.Address;
+import jakarta.validation.constraints.NotNull;
 import lombok.Data;
-import lombok.NonNull;
 
 import java.util.List;
 
 @Data
 public class RestaurantRequest {
 
-    @NonNull
+    @NotNull
     private String name;
-    @NonNull
+    @NotNull
     private String description;
-    @NonNull
+    @NotNull
     private String cuisineType;
-    @NonNull
+    @NotNull
     private Address address;
-    @NonNull
+    @NotNull
     private ContactInfo contactInfo;
-    @NonNull
+    @NotNull
     private String openingHours;
-    @NonNull
+    @NotNull
     private List<String> images;
 }
 

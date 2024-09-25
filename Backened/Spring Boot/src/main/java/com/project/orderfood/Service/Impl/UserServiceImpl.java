@@ -26,11 +26,6 @@ public class UserServiceImpl implements UserService {
     private final OrderDetailsRepo orderDetailsRepo;
 
     @Override
-    public User findByEmail(String email) {
-        return userRepo.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("User with email Not Found"));
-    }
-
-    @Override
     public User findByToken(String token) {
         String email = jwtUtils.parseToken(token).getSubject();
         return userRepo.findByEmail(email).orElseThrow(() -> new UsernameNotFoundException("User with email Not Found"));

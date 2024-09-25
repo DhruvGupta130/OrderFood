@@ -23,7 +23,6 @@ public class OrderServiceImpl implements OrderService {
     private final AddressRepo addressRepo;
     private final RestaurantService restaurantService;
     private final CartService cartService;
-    private final IngredientsItemRepo ingredientsItemRepo;
 
     @Override
     public OrderDetails createOrder(OrderRequest request, User user) throws Exception {

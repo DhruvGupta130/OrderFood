@@ -1,11 +1,8 @@
 package com.project.orderfood.DTO;
 
-import com.fasterxml.jackson.annotation.JsonIgnore;
 import com.project.orderfood.Model.Address;
 import jakarta.persistence.*;
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 @Embeddable
