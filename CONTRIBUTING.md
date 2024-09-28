@@ -10,5 +10,5 @@ Start by forking the repository on GitHub. This creates a personal copy of the p
 ### 2. Clone Your Fork
 Clone your forked repository to your local machine:
 ```bash
-git clone 
+git clone https://github.com/DhruvGupta130/OrderFood.git
 cd orderFood
