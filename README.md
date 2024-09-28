@@ -16,6 +16,8 @@ Before you get started, ensure you have the following installed:
 - **Node.js** (for the frontend)
 - **npm** (Node Package Manager)
 - **React.js** (for building the user interface)
+- **React Redux** (for state management)
+- **Google Material UI** (for UI components)
 - **Java** (for the Spring Boot backend)
 - **Spring Boot** (for creating the backend services)
 
