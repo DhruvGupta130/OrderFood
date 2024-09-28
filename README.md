@@ -1,7 +1,3 @@
-Here's a modified version of the food delivery app description, incorporating additional features and improving the structure:
-
----
-
 # 🍽️ Welcome to **The Gupta's** Food Delivery App!
 
 Experience seamless food delivery, bringing delicious meals right to your doorstep! Whether you're craving a quick bite or planning a feast, we've got you covered.
