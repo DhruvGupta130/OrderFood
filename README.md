@@ -76,6 +76,7 @@ If you encounter any bugs or have suggestions, please open an issue on GitHub! Y
 ## 🌱 Future Plans
 
 - Implement a loyalty program to reward frequent customers.
+- Implement the ratings and reviews by the customers.
 - Expand to include multiple languages and currencies.
 - Enhance user experience with AI-driven meal recommendations.
 
