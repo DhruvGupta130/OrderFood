@@ -21,6 +21,7 @@ Before getting started, ensure you have the following installed:
 - **Google Material UI** (for UI components)
 - **Java** (for the Spring Boot backend)
 - **Spring Boot** (for creating backend services)
+- **Cloudinary** (for uploading images)
 
 ## 🛠️ Getting Started
 
@@ -64,10 +65,9 @@ Inspired by the growing need for convenient food delivery solutions in today’s
 ## 🔍 Additional Features
 
 - **Search Functionality**: Easily find menu items and restaurants using keywords.
-- **User Ratings and Reviews**: Share your experiences by rating restaurants and menu items.
-- **Loyalty Program**: Earn rewards for frequent orders to enjoy discounts and special offers.
-- **Responsive Design**: Optimized for mobile and desktop, ensuring a smooth experience across devices.
-- **Multiple Languages and Currencies**: Support for diverse user bases.
+- **Add to Favorites**: Easily add the restaurants in your favorites for easy trackings.
+- **Cart**: Easily add your favorites items to cart and order collectively.
+- **Order History**: Track your past orders and purchases.
 
 ## 💬 Feedback & Issues
 
