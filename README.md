@@ -37,6 +37,9 @@ npm start
 ```
 
 Ensure you have **Node.js** and **npm** installed.
+### Files to Configure
+1. Frontend/React.js/src/RestaurantOwnersComponent/Utils/UploadToCloud.jsx -> configure your cloudinary Details.
+2. Backened/Spring Boot/src/main/resources/application.properties -> Configure the database settings.
 
 ## 📖 How to Use
 
