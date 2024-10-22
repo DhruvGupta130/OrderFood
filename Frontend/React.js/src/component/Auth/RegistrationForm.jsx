@@ -16,7 +16,7 @@ export const RegistrationForm = () => {
     };
 
     const dispatch = useDispatch();
-    const { error, success } = useSelector(state => state.auth);
+    const { error} = useSelector(state => state.auth);
     const [openSnackbar, setOpenSnackbar] = useState(false);
 
     const handleSubmit = (values) => {
