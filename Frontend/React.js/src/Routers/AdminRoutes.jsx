@@ -14,7 +14,7 @@ export const AdminRoutes = () => {
     if (auth.user) {
       dispatch(getRestaurantByUserId(auth.token || token));
     }
-  }, [auth.user, dispatch, token]);
+  }, [auth.user, dispatch, token, auth.token]);
 
   if (!token) {
     return <Navigate to="/account/login" />;
