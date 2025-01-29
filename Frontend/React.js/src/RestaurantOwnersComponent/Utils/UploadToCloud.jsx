@@ -1,5 +1,7 @@
-const upload_preset = "YOUR_UPLOAD_PRESET";
-const cloud_name = "YOUR_CLOUD_NAME";
+import {CLOUD_NAME, UPLOAD_PRESET} from "../../CONFIG";
+
+const upload_preset = UPLOAD_PRESET;
+const cloud_name = CLOUD_NAME;
 const api_url = `https://api.cloudinary.com/v1_1/${cloud_name}/image/upload`;
 
 export const uploadImageToCloud = async (file) => {
