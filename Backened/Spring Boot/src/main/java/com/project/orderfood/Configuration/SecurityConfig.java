@@ -1,7 +1,8 @@
 package com.project.orderfood.Configuration;
 
 import com.project.orderfood.Configuration.Filter.JwtAuthFilter;
-import lombok.AllArgsConstructor;
+import lombok.RequiredArgsConstructor;
+import org.springframework.beans.factory.annotation.Value;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.security.authentication.AuthenticationManager;
@@ -24,10 +25,13 @@ import java.util.List;
 @Configuration
 @EnableWebSecurity
 @EnableMethodSecurity
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class SecurityConfig {
 
     private final JwtAuthFilter jwtAuthFilter;
+
+    @Value("${FRONTEND_URL}")
+    private String FRONTEND_URL;
 
     @Bean
     public SecurityFilterChain configure(HttpSecurity http) throws Exception {
@@ -48,7 +52,7 @@ public class SecurityConfig {
     private CorsConfigurationSource corsConfiguration() {
         return _ -> {
             CorsConfiguration config = new CorsConfiguration();
-            config.addAllowedOriginPattern("*");
+            config.addAllowedOriginPattern(FRONTEND_URL);
             config.setAllowedMethods(List.of("GET", "POST", "PUT", "DELETE", "OPTIONS"));
             config.setAllowedHeaders(Collections.singletonList("*"));
             config.setExposedHeaders(Collections.singletonList("Authorization"));
