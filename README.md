@@ -2,6 +2,8 @@
 
 Experience seamless food delivery, bringing delicious meals right to your doorstep! Whether you're craving a quick bite or planning a feast, we've got you covered.
 
+Live Website : https://theguptas.netlify.app/
+
 ## 🚀 Key Features
 
 - **Multi-Item Carousel**: Discover top meals with our interactive carousel.
