@@ -9,7 +9,10 @@ import lombok.Data;
 public class RestaurantDTO {
 
     private Long id;
+
+    @Column(columnDefinition = "TEXT")
     private String description;
+
     private boolean isActive;
 
     @ManyToOne
