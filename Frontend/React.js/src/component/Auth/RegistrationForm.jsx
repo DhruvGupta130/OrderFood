@@ -40,15 +40,15 @@ export const RegistrationForm = () => {
                 Register
             </Typography>
 
-            <Snackbar 
-                open={openSnackbar} 
-                autoHideDuration={6000} 
+            <Snackbar
+                open={openSnackbar}
+                autoHideDuration={6000}
                 onClose={handleCloseSnackbar}
                 anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
             >
-                <Alert 
-                    onClose={handleCloseSnackbar} 
-                    severity="error" 
+                <Alert
+                    onClose={handleCloseSnackbar}
+                    severity="error"
                     sx={{ width: '100%', fontSize: '1rem', display: 'flex', alignItems: 'center', whiteSpace: 'nowrap' }}
                 >
                     {error?.message || error}
@@ -58,39 +58,39 @@ export const RegistrationForm = () => {
             <Formik initialValues={initials} onSubmit={handleSubmit}>
                 {({ handleSubmit }) => (
                     <Form onSubmit={handleSubmit}>
-                        <Field 
+                        <Field
                             as={TextField}
                             name="fullName"
                             label="Name"
                             fullWidth
-                            variant="outlined" 
+                            variant="outlined"
                             margin="normal"
                         />
-                        <Field 
+                        <Field
                             as={TextField}
                             type="email"
                             name="email"
                             label="Email"
                             fullWidth
-                            variant="outlined" 
+                            variant="outlined"
                             margin="normal"
                         />
-                        <Field 
+                        <Field
                             as={TextField}
                             type="number"
                             name="phone"
                             label="Mobile"
                             fullWidth
-                            variant="outlined" 
+                            variant="outlined"
                             margin="normal"
                         />
-                        <Field 
+                        <Field
                             as={TextField}
                             type="password"
                             name="password"
                             label="Password"
                             fullWidth
-                            variant="outlined" 
+                            variant="outlined"
                             margin="normal"
                         />
                         <FormControl fullWidth margin='normal'>
@@ -106,10 +106,10 @@ export const RegistrationForm = () => {
                                 <MenuItem value={"ROLE_RESTAURANT_OWNER"}>Restaurant Owner</MenuItem>
                             </Field>
                         </FormControl>
-                        <Button 
-                            sx={{ mt: 2, padding: "1rem" }} 
-                            fullWidth 
-                            type='submit' 
+                        <Button
+                            sx={{ mt: 2, padding: "1rem" }}
+                            fullWidth
+                            type='submit'
                             variant='contained'
                         >
                             Register

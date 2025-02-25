@@ -1,5 +1,5 @@
 import { Create } from '@mui/icons-material';
-import { Avatar, AvatarGroup, Box, Button, Card, CardHeader, Chip, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import { Avatar, AvatarGroup, Box, Button, Card, CardHeader, Chip, IconButton, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography, CircularProgress } from '@mui/material';
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -22,15 +22,30 @@ export const MenuTables = () => {
         }));
     }, [dispatch, restaurant.usersRestaurant.id, token]);
 
-
     const handleIngredientsStock = (id) => {
         dispatch(updateMenuItemsAvailability({ foodId: id, token }));
     };
 
+    if (menu.loading) {
+        return (
+            <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
+                <CircularProgress />
+            </Box>
+        );
+    }
+
+    if (menu.error) {
+        return (
+            <Typography variant="h6" color="error" align="center">
+                {menu.error.message || 'Failed to load menu data. Please try again later.'}
+            </Typography>
+        );
+    }
+
     return (
         <Box>
             <Card elevation={3} sx={{ mt: 2, borderRadius: 2, padding: 2 }}>
-                <CardHeader 
+                <CardHeader
                     title={<Typography variant="h5" sx={{ fontWeight: 'bold', textAlign:"center" }}>Menu</Typography>}
                     sx={{ pt: 2, alignItems: "center" }}
                     action={
@@ -71,8 +86,8 @@ export const MenuTables = () => {
                                     </TableCell>
                                     <TableCell align="right">{item.price}</TableCell>
                                     <TableCell align="right">
-                                        <Button 
-                                            onClick={() => handleIngredientsStock(item.id)} 
+                                        <Button
+                                            onClick={() => handleIngredientsStock(item.id)}
                                             color={item.available ? "success" : "error"}
                                             variant="outlined"
                                         >

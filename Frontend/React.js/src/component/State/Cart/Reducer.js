@@ -55,7 +55,7 @@ const cartReducer = (state = initialState, action) =>{
             return{
                 ...state,
                 loading: false,
-                error: action.payload
+                error: action.payload,
             };
         case LOGOUT:
             localStorage.removeItem("token");

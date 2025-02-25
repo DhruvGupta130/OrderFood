@@ -1,5 +1,5 @@
 import { AccountCircle } from '@mui/icons-material';
-import { Button, Box, Typography } from '@mui/material';
+import { Button, Box, Typography, CircularProgress } from '@mui/material';
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
@@ -15,38 +15,62 @@ const UserProfile = () => {
         navigate("/");
     };
 
+    if (auth.loading) {
+        return (
+            <Box display="flex" justifyContent="center" alignItems="center" minHeight="60vh">
+                <CircularProgress />
+            </Box>
+        );
+    }
+
+    if (auth.error) {
+        return (
+            <Typography variant="h6" color="error" align="center">
+                {auth.error.message || 'Failed to load user profile. Please try again later.'}
+            </Typography>
+        );
+    }
+
+    if (!auth.user) {
+        return (
+            <Typography variant="h6" color="textSecondary" align="center">
+                No user profile found.
+            </Typography>
+        );
+    }
+
     return (
-        <Box 
+        <Box
             className='min-h-[80vh] flex flex-col justify-center items-center text-center p-4'
-            sx={{ 
-                bgcolor: 'background.default', 
+            sx={{
+                bgcolor: 'background.default',
                 borderRadius: 2,
                 boxShadow: 3,
             }}
         >
             <AccountCircle sx={{ fontSize: { xs: "6rem", sm: "9rem" }, color: 'primary.main' }} />
-            <Typography 
-                variant="h5" 
-                className='py-2' 
+            <Typography
+                variant="h5"
+                className='py-2'
                 sx={{ fontWeight: 'bold', fontSize: { xs: '1.5rem', sm: '2rem' } }}
             >
                 {auth.user.fullName}
             </Typography>
-            <Typography 
-                variant="body1" 
+            <Typography
+                variant="body1"
                 sx={{ fontSize: { xs: '0.9rem', sm: '1rem' }, color: 'text.secondary' }}
             >
                 Email: {auth.user.email}
             </Typography>
-            <Typography 
-                variant="body1" 
+            <Typography
+                variant="body1"
                 sx={{ fontSize: { xs: '0.9rem', sm: '1rem' }, color: 'text.secondary' }}
             >
                 Phone: {auth.user.phone}
             </Typography>
-            <Button 
-                onClick={handleLogout} 
-                variant='contained' 
+            <Button
+                onClick={handleLogout}
+                variant='contained'
                 sx={{ margin: "1rem 0rem", padding: { xs: '0.5rem 1rem', sm: '0.75rem 1.5rem' } }}
             >
                 Logout

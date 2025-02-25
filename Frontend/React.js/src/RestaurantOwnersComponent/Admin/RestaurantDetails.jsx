@@ -1,14 +1,26 @@
 import { ArrowDownwardRounded, ArrowUpwardRounded, Email, Facebook, Instagram, Phone, Twitter } from '@mui/icons-material';
-import { Button, Card, CardContent, CardHeader, Grid, IconButton, Collapse, Box, Typography } from '@mui/material';
+import {
+  Button,
+  Card,
+  CardContent,
+  CardHeader,
+  Grid,
+  IconButton,
+  Collapse,
+  Box,
+  Typography,
+  CircularProgress
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { getAllRestaurants, getRestaurantByUserId, updateRestaurantStatus } from '../../component/State/Restaurant/Action';
 
 export const RestaurantDetails = () => {
   const { restaurant } = useSelector(store => store);
+  const { loading } = restaurant;
   const dispatch = useDispatch();
   const token = localStorage.getItem("token");
-  const [loading, setLoading] = useState(false);
+  const [isLoading, setLoading] = useState(false);
   const [openAddress, setOpenAddress] = useState(false);
   const [openContact, setOpenContact] = useState(false);
 
@@ -24,6 +36,11 @@ export const RestaurantDetails = () => {
     dispatch(getAllRestaurants());
   }, [dispatch, token]);
 
+  if(loading)
+    return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+      <CircularProgress/>
+    </div>
+
   return (
     <Box className='px-2 sm:px-3'>
       <Card elevation={3} sx={{ mt: 1, borderRadius: 2, padding: 2 }}>
@@ -35,9 +52,9 @@ export const RestaurantDetails = () => {
               variant='contained'
               onClick={handleRestaurantStatus}
               size='large'
-              disabled={loading}
+              disabled={isLoading}
             >
-              {loading ? 'Updating...' : restaurant.usersRestaurant?.active ? 'Close' : 'Open'}
+              {isLoading ? 'Updating...' : restaurant.usersRestaurant?.active ? 'Close' : 'Open'}
             </Button>
           }
         />

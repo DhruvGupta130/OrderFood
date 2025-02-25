@@ -24,8 +24,10 @@ public class Restaurant {
     private User owner;
 
     private String name;
-    @Column(length = 500)
+
+    @Column(columnDefinition = "TEXT")
     private String description;
+
     private String cuisineType;
 
     @OneToOne

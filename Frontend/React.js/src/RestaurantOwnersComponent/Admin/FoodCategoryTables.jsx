@@ -1,5 +1,20 @@
 import { Create } from '@mui/icons-material';
-import { Box, Card, CardHeader, IconButton, Modal, Paper, Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Typography } from '@mui/material';
+import {
+    Box,
+    Card,
+    CardHeader,
+    CircularProgress,
+    IconButton,
+    Modal,
+    Paper,
+    Table,
+    TableBody,
+    TableCell,
+    TableContainer,
+    TableHead,
+    TableRow,
+    Typography
+} from '@mui/material';
 import React, { useEffect, useState } from 'react';
 import { CreateFoodCategoryForm } from '../RestaurantForm/CreateFoodCategoryForm';
 import { useDispatch, useSelector } from 'react-redux';
@@ -19,6 +34,7 @@ const modalStyle = {
 
 export const FoodCategoryTables = () => {
     const { restaurant } = useSelector(store => store);
+    const { loading } = restaurant;
     const dispatch = useDispatch();
     const token = localStorage.getItem("token");
     const [open, setOpen] = useState(false);
@@ -34,6 +50,11 @@ export const FoodCategoryTables = () => {
     useEffect(() => {
         dispatch(getRestaurantsCategory({ token, id: restaurant.usersRestaurant?.id }));
     }, [dispatch, token, restaurant.usersRestaurant?.id]);
+
+    if(loading)
+        return <div style={{display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <CircularProgress/>
+        </div>
 
     return (
         <Box>

@@ -1,12 +1,13 @@
 import { useSelector } from 'react-redux';
 import SearchResultCard from './searchResultCard';
+import {CircularProgress} from "@mui/material";
 
 const SearchResults = () => {
     const { search, loading, error } = useSelector(state => state.menu);
 
     // Loading state
     if (loading) {
-        return <div className="text-center py-4">Loading...</div>;
+        return <div className="text-center py-4"><CircularProgress/></div>;
     }
 
     // Error state
@@ -16,7 +17,7 @@ const SearchResults = () => {
 
     // Display search results
     return (
-        <div className="p-4">
+        <div>
             {search.length > 0 ? (
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
                     {search.map(item => (

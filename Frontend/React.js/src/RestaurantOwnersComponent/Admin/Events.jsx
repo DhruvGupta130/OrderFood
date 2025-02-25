@@ -80,7 +80,9 @@ export const Events = () => {
       </Modal>
 
       {loading ? (
-        <CircularProgress />
+          <div style={{display: 'flex', alignItems: 'center', justifyContent: 'center'}}>
+            <CircularProgress />
+          </div>
       ) : (
         <div className='grid grid-cols-1 gap-4'>
           {events && events.length > 0 ? (

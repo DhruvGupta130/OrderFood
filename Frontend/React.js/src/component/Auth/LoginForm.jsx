@@ -16,8 +16,14 @@ export const LoginForm = () => {
     const { isLoading, error, success } = useSelector(state => state.auth);
     const [openSnackbar, setOpenSnackbar] = useState(false);
 
-    const handleSubmit = (values) => {
-        dispatch(loginUser({ userData: values, navigate }));
+    const handleSubmit = async (values, { setSubmitting }) => {
+        try {
+            await dispatch(loginUser({ userData: values, navigate }));
+        } catch (err) {
+            console.error('Unexpected error:', err);
+        } finally {
+            setSubmitting(false);
+        }
     };
 
     useEffect(() => {
@@ -31,6 +37,15 @@ export const LoginForm = () => {
         }
     }, [error, dispatch]);
 
+    useEffect(() => {
+        if (success) {
+            const timer = setTimeout(() => {
+                dispatch({ type: 'CLEAR_SUCCESS' });
+            }, 5000);
+            return () => clearTimeout(timer);
+        }
+    }, [success, dispatch]);
+
     const handleCloseSnackbar = () => {
         setOpenSnackbar(false);
         dispatch({ type: 'CLEAR_ERROR' });
@@ -42,21 +57,21 @@ export const LoginForm = () => {
                 Login
             </Typography>
 
-            <Snackbar 
-                open={openSnackbar} 
-                autoHideDuration={6000} 
+            <Snackbar
+                open={openSnackbar}
+                autoHideDuration={6000}
                 onClose={handleCloseSnackbar}
                 anchorOrigin={{ vertical: 'top', horizontal: 'center' }}
             >
-                <Alert 
-                    onClose={handleCloseSnackbar} 
-                    severity="error" 
-                    sx={{ 
-                        width: '100%', 
-                        fontSize: '1rem', 
-                        display: 'flex', 
-                        alignItems: 'center', 
-                        whiteSpace: 'nowrap' ,
+                <Alert
+                    onClose={handleCloseSnackbar}
+                    severity="error"
+                    sx={{
+                        width: '100%',
+                        fontSize: '1rem',
+                        display: 'flex',
+                        alignItems: 'center',
+                        whiteSpace: 'nowrap',
                         color: '#fff'
                     }}
                 >
@@ -65,34 +80,34 @@ export const LoginForm = () => {
             </Snackbar>
 
             <Formik initialValues={initials} onSubmit={handleSubmit}>
-                {({ handleSubmit }) => (
+                {({ handleSubmit, isSubmitting }) => (
                     <Form onSubmit={handleSubmit}>
-                        <Field 
+                        <Field
                             as={TextField}
                             type="email"
                             name="username"
                             label="Email"
                             fullWidth
-                            variant="outlined" 
+                            variant="outlined"
                             margin="normal"
                         />
-                        <Field 
+                        <Field
                             as={TextField}
                             type="password"
                             name="password"
                             label="Password"
                             fullWidth
-                            variant="outlined" 
+                            variant="outlined"
                             margin="normal"
                         />
-                        <Button 
-                            sx={{ mt: 2, padding: "1rem" }} 
-                            fullWidth 
-                            type='submit' 
+                        <Button
+                            sx={{ mt: 2, padding: "1rem" }}
+                            fullWidth
+                            type='submit'
                             variant='contained'
-                            disabled={isLoading}
+                            disabled={isLoading || isSubmitting}
                         >
-                            {isLoading ? 'Logging in...' : 'Login'}
+                            {isLoading || isSubmitting ? 'Logging in...' : 'Login'}
                         </Button>
                     </Form>
                 )}
@@ -104,7 +119,7 @@ export const LoginForm = () => {
                 </Typography>
             )}
             <Typography variant="body2" align="center" sx={{ mt: 2 }}>
-                Don't have an account? 
+                Don't have an account?
                 <Button onClick={() => navigate('/account/register')} color="primary">Register</Button>
             </Typography>
         </div>

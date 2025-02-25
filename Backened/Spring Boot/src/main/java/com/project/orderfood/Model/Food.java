@@ -22,6 +22,8 @@ public class Food {
 
     private String name;
     private double price;
+
+    @Column(columnDefinition = "TEXT")
     private String description;
 
     @ManyToOne
