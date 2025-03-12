@@ -74,6 +74,9 @@ Inspired by the growing need for convenient food delivery solutions in today’s
 - **Cart**: Easily add your favorites items to cart and order collectively.
 - **Order History**: Track your past orders and purchases.
 
+## 📄 License
+This project is licensed under the [MIT License](LICENSE.txt).
+
 ## 💬 Feedback & Issues
 
 If you encounter any bugs or have suggestions, please open an issue on GitHub! Your feedback is invaluable for our continuous improvement.
