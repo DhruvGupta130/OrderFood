@@ -90,7 +90,7 @@ We welcome contributions! Please read the [CONTRIBUTING.md](CONTRIBUTING.md) for
 
 ## 🙏 Acknowledgments
 
-Special thanks to **Code with Zosh** for their support in building this web app!
+This project was inspired by **Code with Zosh** tutorials and extended with additional functionalities and optimizations.
 
 ## 💡 Inspiration
 
