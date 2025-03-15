@@ -8,6 +8,21 @@ import { getCart } from './component/State/Cart/Action';
 import { Routers } from './Routers/Routers';
 
 function App() {
+
+  useEffect(() => {
+    const token = localStorage.getItem('token');
+    if (token) {
+      const payload = JSON.parse(atob(token.split('.')[1]));
+      const expiry = payload.exp * 1000;
+
+      if (Date.now() >= expiry) {
+        alert('Your session has expired. Please log in again.');
+        localStorage.removeItem('token');
+        window.location.href = '/login';
+      }
+    }
+  }, []);
+
   const dispatch=useDispatch();
   const token=localStorage.getItem("token");
   const {auth, cart}=useSelector(store=>store);

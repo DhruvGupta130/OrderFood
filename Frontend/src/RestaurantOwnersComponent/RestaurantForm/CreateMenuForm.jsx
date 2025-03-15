@@ -5,7 +5,7 @@ import React, { useEffect, useState } from 'react';
 import { uploadImageToCloud } from '../Utils/UploadToCloud';
 import { useDispatch, useSelector } from 'react-redux';
 import { createMenuItem } from '../../component/State/Menu/Action';
-import { getIngredientsOfRestaurant } from './../../component/State/Ingredients/Action';
+import { getIngredientsOfRestaurant } from '../../component/State/Ingredients/Action';
 import { useNavigate } from 'react-router-dom';
 
 const initialValues = {

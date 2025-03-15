@@ -1,17 +1,18 @@
 import React, { useEffect, useState } from 'react';
 import { Button, CircularProgress, IconButton, TextField, Grid2, Snackbar } from '@mui/material';
-import { uploadImageToCloud } from './../Utils/UploadToCloud';
+import { uploadImageToCloud } from '../Utils/UploadToCloud';
 import { AddPhotoAlternate, Close } from '@mui/icons-material';
 import { DateTimePicker, LocalizationProvider } from '@mui/x-date-pickers';
 import { AdapterDayjs } from '@mui/x-date-pickers/AdapterDayjs';
 import dayjs from 'dayjs';
 import { useDispatch, useSelector } from 'react-redux';
-import { createEventAction, getRestaurantByUserId, getRestaurantEvents } from './../../component/State/Restaurant/Action';
+import { createEventAction, getRestaurantByUserId, getRestaurantEvents } from '../../component/State/Restaurant/Action';
 
 export const CreateEventForm = ({onSuccess}) => {
   const [uploadImage, setUploadImage] = useState(false);
   const [successMessage, setSuccessMessage] = useState('');
   const [errorMessage, setErrorMessage] = useState('');
+  const [loading, setLoading] = useState(false);
   const token = localStorage.getItem("token");
   const dispatch = useDispatch();
   const { restaurant } = useSelector(store => store);
@@ -62,12 +63,16 @@ export const CreateEventForm = ({onSuccess}) => {
       ...formData,
     };
 
+    setLoading(true);
+
     try {
       await dispatch(createEventAction({ data: eventData, restaurantId: restaurant?.usersRestaurant?.id, token }));
       setSuccessMessage('Event created successfully!');
       onSuccess();
     } catch (error) {
       setErrorMessage('Failed to create event. Please try again.');
+    } finally {
+      setLoading(false);
     }
   };
 
@@ -87,7 +92,7 @@ export const CreateEventForm = ({onSuccess}) => {
   }, [dispatch, token, restaurant?.usersRestaurant?.id]);
 
   return (
-    <div>
+    <div className="w-fit scroll-auto">
       <form onSubmit={handleSubmit}>
         <Grid2 container spacing={3}>
           <Grid2 item size={{ xs: 12 }} className='flex flex-wrap gap-5'>
@@ -170,7 +175,9 @@ export const CreateEventForm = ({onSuccess}) => {
             </LocalizationProvider>
           </Grid2>
           <Grid2 item size={{ xs: 12 }}>
-            <Button type='submit' variant='contained'>Create Event</Button>
+            <Button type="submit" variant="contained" disabled={loading} fullWidth>
+              {loading ? <CircularProgress size={24} /> : "Create Event"}
+            </Button>
           </Grid2>
         </Grid2>
       </form>

@@ -12,7 +12,7 @@ export const Dashboard = () => {
       <Grid2 container spacing={2}>
         <Grid2 item size={{xs:12, md:5}}>
           <Paper elevation={3} sx={styles.card}>
-            <Typography variant="h6" sx={styles.cardTitle}>
+            <Typography variant="h6" sx={styles.title}>
               Menu
             </Typography>
             <Divider sx={styles.divider} />
@@ -21,7 +21,7 @@ export const Dashboard = () => {
         </Grid2>
         <Grid2 item size={{xs:12, md:7}}>
           <Paper elevation={3} sx={styles.card}>
-            <Typography variant="h6" sx={styles.cardTitle}>
+            <Typography variant="h6" sx={styles.title}>
               Orders
             </Typography>
             <Divider sx={styles.divider} />

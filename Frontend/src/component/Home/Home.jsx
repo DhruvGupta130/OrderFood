@@ -29,7 +29,7 @@ const Home = () => {
                 <p className='text-2xl font-semibold text-gray-400 py-3 pb-10'>Top Meals</p>
                 <MultiItemCarousel />
                 <h1 className='text-2xl font-semibold text-gray-400 py-3'>Order From Our Handpicked Favorites</h1>
-                <div>
+                <div className='flex flex-col lg:flex-row lg:flex-wrap lg:justify-start justify-center items-center'>
                     {loading ? (
                         <div className='flex justify-center items-center w-full'><CircularProgress /></div>
                     ) : error ? (

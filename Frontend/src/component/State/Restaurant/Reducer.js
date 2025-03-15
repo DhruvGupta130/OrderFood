@@ -4,6 +4,7 @@ const initialState = {
     restaurants: [],
     usersRestaurant: null,
     loading: false,
+    restaurant: null,
     error: null,
     events: [],
     restaurantEvents: [],
@@ -19,6 +20,8 @@ const restaurantReducer = (state = initialState, action)=>{
         case actionTypes.GET_RESTAURANT_BY_ID_REQUEST:
         case actionTypes.GET_RESTAURANT_BY_USER_ID_REQUEST:
         case actionTypes.CREATE_CATEGORY_REQUEST:
+        case actionTypes.GET_RESTAURANTS_EVENTS_REQUEST:
+        case actionTypes.GET_ALL_EVENTS_REQUEST:
         case actionTypes.GET_RESTAURANTS_CATEGORY_REQUEST:
             return{
                 ...state,
@@ -100,9 +103,11 @@ const restaurantReducer = (state = initialState, action)=>{
         case actionTypes.DELETE_RESTAURANT_FAILURE:
         case actionTypes.UPDATE_RESTAURANT_FAILURE:
         case actionTypes.GET_RESTAURANT_BY_ID_FAILURE:
+        case actionTypes.GET_ALL_EVENTS_FAILURE:
         case actionTypes.GET_RESTAURANT_BY_USER_ID_FAILURE:
         case actionTypes.CREATE_EVENTS_FAILURE:
         case actionTypes.CREATE_CATEGORY_FAILURE:
+        case actionTypes.GET_RESTAURANTS_EVENTS_FAILURE:
         case actionTypes.GET_RESTAURANTS_CATEGORY_FAILURE:
             return{
                 ...state,

@@ -1,0 +1,257 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="8e8df7df-97db-42bc-b0df-e71248ca4dc7" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/.mvn/wrapper/maven-wrapper.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/Dockerfile" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/mvnw" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/mvnw.cmd" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/pom.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Configuration/Filter/JwtAuthFilter.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Configuration/JwtUtils.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Configuration/SecurityConfig.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/AdminFoodController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/AdminOrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/AdminRestaurantController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/AuthController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/CartController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/CategoryController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/CustomerFoodController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/CustomerOrderController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/CustomerRestaurantController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/EventController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/IngredientsController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/AddressDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/CartItemRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/ContactInfo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/EventResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/FoodRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/IngredientsRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/LoginRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/MessageResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/ORDER_STATUS.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/OrderRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/RestaurantDTO.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/RestaurantRequest.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/DTO/USER_ROLES.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/Address.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/Cart.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/CartItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/Category.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/Event.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/Food.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/IngredientsCategory.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/IngredientsItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/OrderDetails.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/OrderItem.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/Restaurant.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Model/User.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/OrderFoodApplication.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/AddressRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/CartItemRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/CartRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/CategoryRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/EventRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/FoodRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/IngredientsCategoryRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/IngredientsItemRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/OrderDetailsRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/OrderItemRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/RestaurantRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Repository/UserRepo.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Response/AuthResponse.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/CartService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/CategoryService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/CustomUserDetailsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/FoodService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/CartServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/CategoryServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/FoodServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/IngredientsServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/OrderServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/RestaurantServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/Impl/UserServiceImpl.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/IngredientsService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/OrderService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/RestaurantService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/java/com/project/orderfood/Service/UserService.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/main/resources/application.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Backened/Spring Boot/src/test/java/com/project/orderfood/OrderFoodApplicationTests.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/README.md" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/netlify.toml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/package-lock.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/package.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/public/favicon.ico" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/public/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/public/logo192.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/public/logo512.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/public/manifest.json" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/public/robots.txt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/App.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/App.test.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/Admin.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/AdminSideBar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/Dashboard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/Events.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/FoodCategory.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/FoodCategoryTables.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/IngredientCategoryTables.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/IngredientTables.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/Ingredients.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/Menu.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/MenuTables.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/OrderTables.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/Orders.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Admin/RestaurantDetails.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/RestaurantForm/CreateEventForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/RestaurantForm/CreateFoodCategoryForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/RestaurantForm/CreateIngredientsCategoryForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/RestaurantForm/CreateIngredientsForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/RestaurantForm/CreateMenuForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/RestaurantForm/CreateRestaurantForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/RestaurantOwnersComponent/Utils/UploadToCloud.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/Routers/AdminRoutes.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/Routers/CustomRoutes.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/Routers/Routers.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/AddressForm/AddressForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Auth/Auth.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Auth/LoginForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Auth/RegistrationForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Cart/AddressCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Cart/Cart.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Cart/CartItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Cart/OrderSuccess.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Config/Api.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Config/Logic.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Home/CarouselItem.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Home/Home.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Home/Home.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Home/MultiItemCarousel.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Payment/PaymentSuccess.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Restaurant/MenuCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Restaurant/RestaurantCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/Restaurant/RestaurantDetails.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Authentication/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Authentication/ActionTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Authentication/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Cart/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Cart/ActionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Cart/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Ingredients/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Ingredients/ActionTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Ingredients/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Menu/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Menu/ActionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Menu/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Order/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Order/ActionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Order/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Restaurant/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Restaurant/ActionTypes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Restaurant/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/RestaurantOrder/Action.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/RestaurantOrder/ActionType.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/RestaurantOrder/Reducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/State/Store.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/navbar/Navbar.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/navbar/Navbar.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/navbar/searchResultCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/navbar/searchResuts.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/Addresses.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/EventCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/Events.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/Favorites.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/OrderCard.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/Orders.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/Profile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/ProfileNavigation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/profile/UserProfile.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/component/theme/theme.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/logo.svg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/reportWebVitals.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/src/setupTests.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/React.js/tailwind.config.js" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitHubPullRequestSearchHistory">{
+  &quot;lastFilter&quot;: {
+    &quot;state&quot;: &quot;OPEN&quot;,
+    &quot;assignee&quot;: &quot;DhruvGupta130&quot;
+  }
+}</component>
+  <component name="GithubPullRequestsUISettings">{
+  &quot;selectedUrlAndAccountId&quot;: {
+    &quot;url&quot;: &quot;https://github.com/DhruvGupta130/OrderFood.git&quot;,
+    &quot;accountId&quot;: &quot;f6c2a1f8-0d9d-46e2-ac7e-7782d530e068&quot;
+  }
+}</component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 8
+}</component>
+  <component name="ProjectId" id="2uM3Zg9svsRWNPyMixNWKgCWltv" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "Node.js.Dashboard.jsx.executor": "Run",
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "RunOnceActivity.git.unshallow": "true",
+    "git-widget-placeholder": "main",
+    "ignore.virus.scanning.warn.message": "true",
+    "last_opened_file_path": "C:/Users/dhruv/IdeaProjects/OrderFood",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "ts.external.directory.path": "C:\\Program Files\\JetBrains\\WebStorm 2024.3.4\\plugins\\javascript-plugin\\jsLanguageServicesImpl\\external",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="C:\Users\dhruv\IdeaProjects\OrderFood\Frontend\React.js\build" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-js-predefined-d6986cc7102b-1632447f56bf-JavaScript-WS-243.26053.12" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="8e8df7df-97db-42bc-b0df-e71248ca4dc7" name="Changes" comment="" />
+      <created>1742044672528</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1742044672528</updated>
+      <workItem from="1742044673753" duration="3467000" />
+      <workItem from="1742050711692" duration="3367000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

@@ -11,11 +11,14 @@ const style = {
   left: '50%',
   transform: 'translate(-50%, -50%)',
   width: 600,
+  maxHeight: '80vh', // Limits height to 80% of viewport height
+  overflowY: 'auto', // Enables vertical scrolling when content overflows
   bgcolor: 'background.paper',
   border: '2px solid #000',
   boxShadow: 24,
   p: 4,
 };
+
 
 export const Events = () => {
   const token = localStorage.getItem("token");

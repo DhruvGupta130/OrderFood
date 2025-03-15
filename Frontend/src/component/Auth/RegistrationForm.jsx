@@ -1,26 +1,28 @@
-import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography, Snackbar, Alert } from '@mui/material';
+import { Button, FormControl, InputLabel, MenuItem, Select, TextField, Typography, Snackbar, Alert, CircularProgress } from '@mui/material';
 import { Field, Formik, Form } from 'formik';
+import * as Yup from 'yup';
 import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { registerUser } from '../State/Authentication/Action';
 import { useDispatch, useSelector } from 'react-redux';
 
+const validationSchema = Yup.object({
+    fullName: Yup.string().required('Full Name is required'),
+    email: Yup.string().email('Invalid email address').required('Email is required'),
+    phone: Yup.string().matches(/^\d{10}$/, 'Invalid phone number').required('Phone number is required'),
+    password: Yup.string().min(6, 'Password must be at least 6 characters').required('Password is required'),
+    role: Yup.string().required('Role is required')
+});
+
 export const RegistrationForm = () => {
     const navigate = useNavigate();
-    const initials = {
-        fullName: "",
-        email: "",
-        phone: "",
-        password: "",
-        role: ""
-    };
-
     const dispatch = useDispatch();
-    const { error } = useSelector(state => state.auth);
+    const { error, isLoading } = useSelector(state => state.auth);
     const [openSnackbar, setOpenSnackbar] = useState(false);
 
-    const handleSubmit = (values) => {
+    const handleSubmit = (values, { setSubmitting }) => {
         dispatch(registerUser({ userData: values, navigate }));
+        setSubmitting(false);
     };
 
     useEffect(() => {
@@ -32,6 +34,14 @@ export const RegistrationForm = () => {
     const handleCloseSnackbar = () => {
         setOpenSnackbar(false);
         dispatch({ type: 'CLEAR_ERROR' });
+    };
+
+    const initials = {
+        fullName: "",
+        email: "",
+        phone: "",
+        password: "",
+        role: ""
     };
 
     return (
@@ -55,8 +65,12 @@ export const RegistrationForm = () => {
                 </Alert>
             </Snackbar>
 
-            <Formik initialValues={initials} onSubmit={handleSubmit}>
-                {({ handleSubmit }) => (
+            <Formik
+                initialValues={initials}
+                validationSchema={validationSchema}
+                onSubmit={handleSubmit}
+            >
+                {({ handleSubmit, errors, touched, isSubmitting }) => (
                     <Form onSubmit={handleSubmit}>
                         <Field
                             as={TextField}
@@ -65,6 +79,8 @@ export const RegistrationForm = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
+                            error={touched.fullName && !!errors.fullName}
+                            helperText={touched.fullName && errors.fullName}
                         />
                         <Field
                             as={TextField}
@@ -74,6 +90,8 @@ export const RegistrationForm = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
+                            error={touched.email && !!errors.email}
+                            helperText={touched.email && errors.email}
                         />
                         <Field
                             as={TextField}
@@ -83,6 +101,8 @@ export const RegistrationForm = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
+                            error={touched.phone && !!errors.phone}
+                            helperText={touched.phone && errors.phone}
                         />
                         <Field
                             as={TextField}
@@ -92,8 +112,10 @@ export const RegistrationForm = () => {
                             fullWidth
                             variant="outlined"
                             margin="normal"
+                            error={touched.password && !!errors.password}
+                            helperText={touched.password && errors.password}
                         />
-                        <FormControl fullWidth margin='normal'>
+                        <FormControl fullWidth margin='normal' error={touched.role && !!errors.role}>
                             <InputLabel id="role-label">Role</InputLabel>
                             <Field
                                 as={Select}
@@ -111,8 +133,10 @@ export const RegistrationForm = () => {
                             fullWidth
                             type='submit'
                             variant='contained'
+                            disabled={isSubmitting || isLoading}
+                            startIcon={isLoading && <CircularProgress size={24} color="inherit" />}
                         >
-                            Register
+                            {isLoading ? 'Registering...' : 'Register'}
                         </Button>
                     </Form>
                 )}
